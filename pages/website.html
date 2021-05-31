@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>index</title>
+
+  <!--icon-->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <!--font-->
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway+Dots&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap"
+    rel="stylesheet">
+  <!--style-->
+  <link rel="stylesheet" href="../assets/css/reset.css" />
+  <link rel="stylesheet" href="../assets/css/header.css" />
+  <link rel="stylesheet" href="../assets/css/website.css" />
+
+  <!--script-->
+  <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/ScrollTrigger.min.js"></script>
+  <script defer src="../assets/js/header.js"></script>
+  <script defer src="../assets/js/website.js"></script>
+</head>
+
+<body>
+  <main id="root" class="lock">
+    <!--loader-->
+    <div class="loader loader--active">
+
+      <div class="loader__tile"></div>
+      <div class="loader__tile"></div>
+      <div class="loader__tile"></div>
+      <div class="loader__tile"></div>
+      <div class="loader__tile"></div>
+    </div>
+    <!--//loader-->
+    <!-- <div id="scroll">0</div> -->
+
+    <!--header-->
+    <?php
+    include '../component/header.php';
+  ?>
+    <!--//header-->
+    <section id="contents">
+      <div id="section1">
+        <div class="sec1">
+          <div class="title">
+            <h2 class="split">RESPONSIVE IS LIKE A WATER</h2>
+            <p>반응형 웹 디자인이란 하나의 웹사이트에서 PC, 스마트폰, 태블릿 PC 등 접속하는 디스플레이의 종류에 따라 화면의
+              크기가 자동으로 변하도록 만든 웹페이지 접근 기법을 의미합니다.</p>
+          </div>
+        </div>
+      </div>
+      <!--//section1-->
+      <div id="section2">
+        <div class="sec2">
+          <div class="left">
+            <ul>
+              <li>Website</li>
+              <li>{responsive : 6PRJ</li>
+            </ul>
+            <span class="dot"></span>
+          </div>
+          <div class="right">
+            <ul class="boxes" id="boxTop">
+              <li class="box box1">
+                <div class="desc">
+                  <div class="desc_container">
+                    <div class="desc_tit">
+                      <em>Project 01</em>
+                      <h4>Sony Korea</h4>
+                    </div>
+                    <p>소니 반응형 MAIN<br />
+                      SLICK와 SWIPER 플러그인 사용하여 슬라이드를 구성하고 레이아웃 구성시 일부분 FLEX와 GRID를 활용하여 화면 구성하였습니다. 오른쪽 고정 네비게이션으로 패럴랙스 및
+                      호버효과 구현하였습니다.</p>
+                    <span class="view"><a href="#">view site<span class="material-icons">
+                          arrow_forward
+                        </span></a></span>
+                  </div>
+                </div>
+                <div class="pic">
+                  <div class="pic_container">
+                    <img src="../assets/img/sonyfront.png" alt="sony" id="desk1">
+                    <span id="text1">P01</span>
+                  </div>
+                </div>
+              </li>
+              <li class="box box2">
+                <div class="desc">
+                  <div class="desc_container">
+                    <div class="desc_tit">
+                      <em>Project 02</em>
+                      <h4>Megabox</h4>
+                    </div>
+                    <p>메가박스 반응형 MAIN<br />
+                      swiper.js 플러그인을 사용하여 슬라이드를 구성하고 이미지스프라이트 기법으로
+                      전체적인 아이콘 및 이미지 구성하였습니다. select태그를 활용하여 옵션값을 지정
+                      해보았고, 유튜브 api를 활용하여 클릭시 팝업 구현하였습니다.</p>
+                    <span class="view"><a href="#">view site<span class="material-icons">
+                          arrow_forward
+                        </span></a></span>
+                  </div>
+                </div>
+                <div class="pic">
+                  <div class="pic_container">
+                    <img src="../assets/img/megafront.png" alt="mega" id="desk2">
+                    <span id="text2">P02</span>
+                  </div>
+                </div>
+              </li>
+              <li class="box box3">
+                <div class="desc">
+                  <div class="desc_container">
+                    <div class="desc_tit">
+                      <em>Project 03</em>
+                      <h4>Baemin Site</h4>
+                    </div>
+                    <p>배달의 민족 반응형 MAIN<br />
+                      css animation을 활용하여 스크롤시 캐릭터들을 이동시키거나, 스크롤 값에 따라
+                      캐릭터들이 보이고 사라지는 효과를 넣어보았습니다. 패럴럭스 네비게이션을 추가
+                      하여 생동감 있는 페이지를 구성하였습니다.</p>
+                    <span class="view"><a href="#">view site<span class="material-icons">
+                          arrow_forward
+                        </span></a></span>
+                  </div>
+                </div>
+                <div class="pic">
+                  <div class="pic_container">
+                    <img src="../assets/img/baeminfront.png" alt="baemin" id="desk3">
+                    <span id="text3">P03</span>
+                  </div>
+                </div>
+              </li>
+              <li class="box box4">
+                <div class="desc">
+                  <div class="desc_container">
+                    <div class="desc_tit">
+                      <em>Project 04</em>
+                      <h4>Gabia Site</h4>
+                    </div>
+                    <p>가비아 반응형 MAIN<br />
+                      swiper.js 로 상단 슬라이드를 구성하고, hover시 메뉴별 애니메이션 효과를 적용
+                      하였습니다.input의 기본 속성을 변형, placeholder를 활용한 레이아웃 구성을 하였습니다.</p>
+                    <span class="view"><a href="#">view site<span class="material-icons">
+                          arrow_forward
+                        </span></a></span>
+                  </div>
+                </div>
+                <div class="pic">
+                  <div class="pic_container">
+                    <img src="../assets/img/gabiafront.png" alt="gabia" id="desk4">
+                    <span id="text4">P04</span>
+                  </div>
+                </div>
+              </li>
+              <li class="box box5">
+                <div class="desc">
+                  <div class="desc_container">
+                    <div class="desc_tit">
+                      <em>Project 05</em>
+                      <h4>Andmarq</h4>
+                    </div>
+                    <p>앤드마크 리디자인 MAIN + 4 SUB<br />
+                      4개의 서브페이지를 포함한 앤드마크 리디자인 홈페이지입니다. <br />
+                      skrolljs 플러그인과 jquery를 활용한 가로스크롤 반응형 디자인입니다.햄버거 메뉴 및 커버 이미지에 css animation을 일부 적용시켰습니다.
+                    </p>
+                    <span class="view"><a href="#">view site<span class="material-icons">
+                          arrow_forward
+                        </span></a></span>
+                  </div>
+                </div>
+                <div class="pic">
+                  <div class="pic_container">
+                    <img src="../assets/img/andmarqfront.png" alt="andmarq" id="desk5">
+                    <span id="text5">P05</span>
+                  </div>
+                </div>
+              </li>
+              <li class="box box6">
+                <div class="desc">
+                  <div class="desc_container">
+                    <div class="desc_tit">
+                      <em>Project 06</em>
+                      <h4>Deponde</h4>
+                    </div>
+                    <p>디폰데 리디자인 MAIN + 3SUB<br />
+                      3개의 서브페이지를 포함한 디폰데 리디자인 홈페이지입니다.<br />
+                      swiper 플러그인의 패럴럭스 기능과 grid 시스템을 활용하여 작업하였습니다.
+                      index 페이지 상품 메뉴 호버시 transform 속성을 적용해 가볍게 원근감을 주었습니다.</p>
+                    <span class="view"><a href="#">view site<span class="material-icons">
+                          arrow_forward
+                        </span></a></span>
+                  </div>
+                </div>
+                <div class="pic">
+                  <div class="pic_container">
+                    <img src="../assets/img/deondefront.png" alt="deponde" id="desk6">
+                    <span id="text6">P06</span>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!--//section2-->
+      <footer id="footer">
+        <div class="container">
+          <div class="footer">
+            <ul class="study">
+              <li><a href="#">Blog</a></li>
+              <li><a href="#">Gitbook</a></li>
+            </ul>
+            <span class="IMG"></span>
+            <span>ContactOn {01029693106 : Hwang Minji;}</span>
+          </div>
+        </div>
+      </footer>
+      <!--//footer-->
+    </section>
+    <!--//contents-->
+  </main>
+</body>
+
+</html>

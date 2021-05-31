@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>index</title>
+
+  <!--icon-->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <!--font-->
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway+Dots&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap"
+    rel="stylesheet">
+  <!--style-->
+  <link rel="stylesheet" href="../assets/css/reset.css" />
+  <link rel="stylesheet" href="../assets/css/header.css" />
+  <link rel="stylesheet" href="../assets/css/javascript.css" />
+
+  <!--script-->
+  <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/ScrollTrigger.min.js"></script>
+  <script defer src="../assets/js/header.js"></script>
+  <script defer src="../assets/js/javascript.js"></script>
+</head>
+
+<body>
+  <main id="root" class="lock">
+    <!--loader-->
+    <div class="loader loader--active">
+
+      <div class="loader__tile"></div>
+      <div class="loader__tile"></div>
+      <div class="loader__tile"></div>
+      <div class="loader__tile"></div>
+      <div class="loader__tile"></div>
+    </div>
+    <!--//loader-->
+    <!-- <div id="scroll">0</div> -->
+
+    <!--header-->
+    <?php
+    include '../component/header.php';
+  ?>
+    <!--//header-->
+    <section id="contents">
+      <div id="cursor"></div>
+      <ul id="mouseevent">
+        <li>clientX: <span class="clientX">0</span></li>
+        <li>clientY: <span class="clientY">0</span></li>
+        <li>pageX: <span class="pageX">0</span></li>
+        <li>pageY: <span class="pageY">0</span></li>
+      </ul>
+      <section id="section1">
+        <div class="sec1">
+          <div class="title">
+            <h2 class="split">JAVASCRIPT<br />
+              CREATES ALL.</h2>
+            <p>자바스크립트는 객체 기반의 스크립트 프로그래밍 언어로 웹 브라우저 내에서 주로 사용하며, 다른 응용 프로그램의 내장 객체에도 접근할 수 있는 기능을 가지고 있습니다.</p>
+          </div>
+        </div>
+      </section>
+      <!--//section1-->
+      <section id="section2">
+        <div class="sec2">
+          <div class="container">
+            <ul class="cont_nav">
+              <li>01</li>
+              <li>JAVASCRIPT MIN PRJ</li>
+              <li>FONT TRANSFORM</li>
+            </ul>
+            <div class="cont cont1">
+              <div class="jscont">
+                <div class="controls">
+                  <label for="fontSize">FONT SIZE</label>
+                  <input type="range" name="fontSize" min="10" max="200" value="200" data-sizing="px" class="fontSize">
+
+                  <label for="letterSpacing">LETTER SPACING:</label>
+                  <input type="range" name="letterSpacing" min="0" value="10" max="25" value="10" data-sizing="px"
+                    class="letterSpacing">
+
+                  <label for="base">COLOR CHANGE</label>
+                  <input type="color" name="base" value="#1d1d1d" class="color">
+                </div>
+                <div class="txt">
+                  <h3 contenteditable="true">I LOVE JS}</h3>
+                  <!-- <input type="text" name="txt"contenteditable="true"> -->
+                </div>
+                <div class="jsdesc">
+                  <h4>JS PRJ 01</h4>
+                  <span class="view"><a href="#">viewcode<span class="material-icons">
+                    arrow_forward
+                  </span></a></span>
+                  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorum magnam nam incidunt sed. Optio incidunt laudantium officiis repellat facere voluptates natus temporibus tempore consequatur magni, vel quasi ea quo odio.</p>
+                </div> 
+              </div>
+            </div>
+            <!--//cont1-->
+            <ul class="cont_nav">
+              <li>02</li>
+              <li>JAVASCRIPT MIN PRJ</li>
+              <li>ANALOGUE CLOCK</li>
+            </ul>
+            <div class="cont cont2">
+              <div class="jscont">
+                <div class="controls">
+                  <label for="base">COLOR CHANGE</label>
+                  <input type="color" name="base" value="#1d1d1d" class="color">
+                </div>
+                <div class="clock-box">
+                  <div>
+                    <div class="clock-container">
+                      <h2 class="nation">KOREA</h2>
+                      <h3 class="time1">0</h3>
+                      <div class="clock">
+                        <div class="clock-face">
+                          <div class="hand hour hour-hand1"></div>
+                          <div class="hand min-hand1"></div>
+                          <div class="hand second second-hand1"></div>
+                        </div>
+                        <div class="clock-center"></div>
+                      </div>
+                    </div>
+                    <div class="clock-container">
+                      <h2 class="nation">RUSSIA</h2>
+                      <h3 class="time2">0</h3>
+                      <div class="clock">
+                        <div class="clock-face">
+                          <div class="hand hour hour-hand2"></div>
+                          <div class="hand min-hand2"></div>
+                          <div class="hand second second-hand2"></div>
+                        </div>
+                        <div class="clock-center"></div>
+                      </div>
+                    </div>
+                    <div class="clock-container">
+                      <h2 class="nation">AMERICA</h2>
+                      <h3 class="time3">0</h3>
+                      <div class="clock">
+                        <div class="clock-face">
+                          <div class="hand hour hour-hand3"></div>
+                          <div class="hand min-hand3"></div>
+                          <div class="hand second second-hand3"></div>
+                        </div>
+                        <div class="clock-center"></div>
+                      </div>
+                    </div>
+                    <div class="clock-container">
+                      <h2 class="nation">CANADA</h2>
+                      <h3 class="time4">0</h3>
+                      <div class="clock">
+                        <div class="clock-face">
+                          <div class="hand hour hour-hand4"></div>
+                          <div class="hand min-hand4"></div>
+                          <div class="hand second second-hand4"></div>
+                        </div>
+                        <div class="clock-center"></div>
+                      </div>
+                    </div>
+                    <div class="clock-container">
+                    <h2 class="nation">BRITISH</h2>
+                    <h3 class="time5">0</h3>
+                    <div class="clock">
+                      <div class="clock-face">
+                        <div class="hand hour hour-hand5"></div>
+                        <div class="hand min-hand5"></div>
+                        <div class="hand second second-hand5"></div>
+                      </div>
+                      <div class="clock-center"></div>
+                    </div>
+                  </div>
+                  </div>
+                </div>
+                <div class="jsdesc">
+                  <h4>JS PRJ 02</h4>
+                  <span class="view"><a href="#">viewcode<span class="material-icons">
+                    arrow_forward
+                  </span></a></span>
+                  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorum magnam nam incidunt sed. Optio incidunt laudantium officiis repellat facere voluptates natus temporibus tempore consequatur magni, vel quasi ea quo odio.</p>
+                </div> 
+              </div>
+            </div>
+            <!--//cont2-->
+            <ul class="cont_nav">
+              <li>03</li>
+              <li>JAVASCRIPT MIN PRJ</li>
+              <li>MOVING KEYBOARD</li>
+            </ul>
+            <div class="cont cont3">
+              <div class="jscont">
+                <div class="controls">
+                  <label for="base">COLOR CHANGE</label>
+                  <input type="color" name="base" value="#1d1d1d" class="color">
+                </div>
+                <div class="pushTXT">
+                  <p>00</p>
+                </div>
+                <div class="js_contbox">
+                  <div class="cube_cont">
+                    <div class="cube">
+                      <div></div>
+                      <div></div>
+                      <div></div>
+                      <div></div>
+                      <div class="front">
+                        <em>Q</em>
+                        <span>ㅃ</span>
+                        <strong>ㅂ</strong>
+                      </div>
+                      <div></div>
+                    </div>
+                    <div class="cube">
+                      <div></div>
+                      <div></div>
+                      <div></div>
+                      <div></div>
+                      <div class="front">
+                        <em>Q</em>
+                        <span>ㅃ</span>
+                        <strong>ㅂ</strong>
+                      </div>
+                      <div></div>
+                    </div>
+                    <div class="cube">
+                      <div></div>
+                      <div></div>
+                      <div></div>
+                      <div></div>
+                      <div class="front">
+                        <em>Q</em>
+                        <span>ㅃ</span>
+                        <strong>ㅂ</strong>
+                      </div>
+                      <div></div>
+                    </div>
+                    <div class="cube">
+                      <div></div>
+                      <div></div>
+                      <div></div>
+                      <div></div>
+                      <div class="front">
+                        <em>A</em>
+                        <span></span>
+                        <strong>ㅁ</strong>
+                      </div>
+                      <div></div>
+                    </div>
+                    <div class="cube">
+                      <div></div>
+                      <div></div>
+                      <div></div>
+                      <div></div>
+                      <div class="front">
+                        <em>Z</em>
+                        <span></span>
+                        <strong>ㅋ</strong>
+                      </div>
+                      <div></div>
+                    </div>
+                    <div class="cube">
+                      <div></div>
+                      <div></div>
+                      <div></div>
+                      <div></div>
+                      <div class="front">
+                        <em>Tab</em>
+                        <span></span>
+                        <strong></strong>
+                      </div>
+                      <div></div>
+                    </div>
+                    <div class="cube">
+                      <div></div>
+                      <div></div>
+                      <div></div>
+                      <div></div>
+                      <div class="front">
+                        <em>!</em>
+                        <span></span>
+                        <strong>1</strong>
+                      </div>
+                      <div></div>
+                    </div>
+                  </div>
+                  <div class="cube_cont">
+
+                    <div class="cube">
+                      <div></div>
+                      <div></div>
+                      <div></div>
+                      <div></div>
+                      <div class="front">
+                        <em>Q</em>
+                        <span>ㅃ</span>
+                        <strong>ㅂ</strong>
+                      </div>
+                      <div></div>
+                    </div>
+                    <div class="cube">
+                      <div></div>
+                      <div></div>
+                      <div></div>
+                      <div></div>
+                      <div class="front">
+                        <em>A</em>
+                        <span></span>
+                        <strong>ㅁ</strong>
+                      </div>
+                      <div></div>
+                    </div>
+                    <div class="cube">
+                      <div></div>
+                      <div></div>
+                      <div></div>
+                      <div></div>
+                      <div class="front">
+                        <em>Z</em>
+                        <span></span>
+                        <strong>ㅋ</strong>
+                      </div>
+                      <div></div>
+                    </div>
+                    <div class="cube" style="opacity:0">
+                      <div></div>
+                      <div></div>
+                      <div></div>
+                      <div></div>
+                      <div class="front">
+                        <em>Tab</em>
+                        <span></span>
+                        <strong></strong>
+                      </div>
+                      <div></div>
+                    </div>
+                    <div class="cube">
+                      <div></div>
+                      <div></div>
+                      <div></div>
+                      <div></div>
+                      <div class="front">
+                        <em>!</em>
+                        <span></span>
+                        <strong>1</strong>
+                      </div>
+                      <div></div>
+                    </div>
+                  </div>
+                  <div class="cube_cont">
+                    <div class="cube" style="opacity:0">
+                      <div></div>
+                      <div></div>
+                      <div></div>
+                      <div></div>
+                      <div class="front">
+                        <em>W</em>
+                        <span>ㅉ</span>
+                        <strong>ㅈ</strong>
+                      </div>
+                      <div></div>
+                    </div>
+                    <div class="cube">
+                      <div></div>
+                      <div></div>
+                      <div></div>
+                      <div></div>
+                      <div class="front">
+                        <em>S</em>
+                        <span></span>
+                        <strong>ㄴ</strong>
+                      </div>
+                      <div></div>
+                    </div>
+                    <div class="cube">
+                      <div></div>
+                      <div></div>
+                      <div></div>
+                      <div></div>
+                      <div class="front">
+                        <em>X</em>
+                        <span></span>
+                        <strong>ㅌ</strong>
+                      </div>
+                      <div></div>
+                    </div>
+                    <div class="cube">
+                      <div></div>
+                      <div></div>
+                      <div></div>
+                      <div></div>
+                      <div class="front">
+                        <em>Caps Lock</em>
+                        <span></span>
+                        <strong></strong>
+                      </div>
+                      <div></div>
+                    </div>
+                    <div class="cube">
+                      <div></div>
+                      <div></div>
+                      <div></div>
+                      <div></div>
+                      <div class="front">
+                        <em>@</em>
+                        <span></span>
+                        <strong>2</strong>
+                      </div>
+                      <div></div>
+                    </div>
+                  </div>
+                  <div class="cube_cont">
+                    <div class="cube">
+                      <div></div>
+                      <div></div>
+                      <div></div>
+                      <div></div>
+                      <div class="front">
+                        <em>E</em>
+                        <span>ㄸ</span>
+                        <strong>ㄷ</strong>
+                      </div>
+                      <div></div>
+                    </div>
+                    <div class="cube">
+                      <div></div>
+                      <div></div>
+                      <div></div>
+                      <div></div>
+                      <div class="front">
+                        <em>D</em>
+                        <span></span>
+                        <strong>ㅇ</strong>
+                      </div>
+                      <div></div>
+                    </div>
+                    <div class="cube">
+                      <div></div>
+                      <div></div>
+                      <div></div>
+                      <div></div>
+                      <div class="front">
+                        <em>R</em>
+                        <span>ㄲ</span>
+                        <strong>ㄱ</strong>
+                      </div>
+                      <div></div>
+                    </div>
+                    <div class="cube" style="opacity:0">
+                      <div></div>
+                      <div></div>
+                      <div></div>
+                      <div></div>
+                      <div class="front">
+                        <em>Shift</em>
+                        <span></span>
+                        <strong></strong>
+                      </div>
+                      <div></div>
+                    </div>
+                    <div class="cube">
+                      <div></div>
+                      <div></div>
+                      <div></div>
+                      <div></div>
+                      <div class="front">
+                        <em>#</em>
+                        <span></span>
+                        <strong>3</strong>
+                      </div>
+                      <div></div>
+                    </div>
+                    <div class="cube">
+                      <div></div>
+                      <div></div>
+                      <div></div>
+                      <div></div>
+                      <div class="front">
+                        <em>Q</em>
+                        <span>ㅃ</span>
+                        <strong>ㅂ</strong>
+                      </div>
+                      <div></div>
+                    </div>
+                    <div class="cube">
+                      <div></div>
+                      <div></div>
+                      <div></div>
+                      <div></div>
+                      <div class="front">
+                        <em>Q</em>
+                        <span>ㅃ</span>
+                        <strong>ㅂ</strong>
+                      </div>
+                      <div></div>
+                    </div>
+                    <div class="cube">
+                      <div></div>
+                      <div></div>
+                      <div></div>
+                      <div></div>
+                      <div class="front">
+                        <em>Q</em>
+                        <span>ㅃ</span>
+                        <strong>ㅂ</strong>
+                      </div>
+                      <div></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="jsdesc">
+                  <h4>JS PRJ 03</h4>
+                  <span class="view"><a href="#">viewcode<span class="material-icons">
+                    arrow_forward
+                  </span></a></span>
+                  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorum magnam nam incidunt sed. Optio incidunt laudantium officiis repellat facere voluptates natus temporibus tempore consequatur magni, vel quasi ea quo odio.</p>
+                </div> 
+              </div>
+            </div>
+            <!--//cont3-->
+            <!-- <ul class="cont_nav">
+              <li>04</li>
+              <li>JAVASCRIPT MIN PRJ</li>
+              <li>SCROLL VALUE TEXT/li>
+            </ul>
+            <div class="cont cont4">
+              <div class="jscont">
+                <div class="controls">
+                  <label for="base">COLOR CHANGE</label>
+                  <input type="color" name="base" value="#1d1d1d" class="color">
+                </div>
+                <div class="js_contbox">
+                  <div class="scroll_cont">
+                    <div class="left">
+                      <ul>
+                        <li>page top : <span class="top">0</span></li>
+                        <li>page bottom : <span class="bottom">0</span></li>
+                        <li>page yscroll : <span class="yscroll">0</span></li>
+                      </ul>
+                    </div>
+                    <div class="right" id="rightscroll">
+                      <h3> 자바스크립트의 역사</h3>
+                      <p id="yscroll">
+                        초창기 자바스크립트는 웹 페이지의 보조적인 기능을 수행하기 위해 한정적인 용도로 사용되었다. 이 시기에 대부분 로직은 주로 웹 서버에서 실행되었고 브라우저는 서버로부터
+                        전달받은
+                        HTML과 CSS를 단순히 렌더링하는 수준이었다.
+                      </p>
+                      <p>
+                        1999년, 자바스크립트를 이용해서 비동기적(Asynchronous)으로 서버와 브라우저가 데이터를 교환할 수 있는 통신 기능인 Ajax(Asynchronous
+                        JavaScript
+                        and XML)가 XMLHttpRequest이라는 이름으로 등장했다.
+                      </p>
+                      <p>
+                        이전의 웹 페이지는 서버로부터 완전한 HTML을 전송 받아 웹 페이지 전체를 렌더링하는 방식으로 동작했다. 따라서 화면이 전환되면 서버로부터 새로운 HTML을 전송 받아 웹
+                        페이지 전체를 처음부터 다시 렌더링하였다. 이는 변경이 없는 부분까지 포함된 HTML을 서버로부터 다시 전송 받기 때문에 불필요한 데이터 통신이 발생하고, 변경이 없는
+                        부분까지
+                        처음부터 다시 렌더링해야 하기 때문에 퍼포먼스 측면에서도 불리한 방식이다. 이로 인해 화면 전환이 일어나면 화면이 순간적으로 깜박이는 현상이 발생하고 이는 웹 애플리케이션의
+                        한계로 받아들여 졌다.
+                      </p>
+                      <p>
+                        Ajax의 등장은 이전의 패러다임을 획기적으로 전환했다. 즉, 웹 페이지의 변경이 필요 없는 부분은 다시 렌더링하지 않고, 서버로부터 필요한 데이터만을 전송 받아 변경이
+                        필요한
+                        부분만을 한정적으로 렌더링하는 방식이 가능해진 것이다. 이로 인해 웹 브라우저에서도 데스크톱 애플리케이션과 유사한 빠른 퍼포먼스와 부드러운 화면 전환이 가능케 되었다.
+                      </p>
+                      <p>
+                        2005년, 구글이 발표한 Google Maps는 웹 애플리케이션 개발 프로그래밍 언어로서 자바스크립트의 가능성을 확인하는 계기를 마련했다. 웹 브라우저에서 자바스크립트와
+                        Ajax를 기반으로 동작하는 Google Maps가 데스크톱 애플리케이션과 비교해 손색이 없을 정도의 퍼포먼스와 부드러운 화면 전환 효과를 보여준 것이다.
+                      </p>
+                      <p>
+                        2006년, jQuery의 등장으로 다소 번거롭고 논란이 있던 DOM(Document Object Model)을 보다 쉽게 제어할 수 있게 되었고 크로스 브라우징 이슈도
+                        어느
+                        정도 해결되었다. jQuery는 넓은 사용자 층을 순식간에 확보했다. 이로 인해 당시 다소 까다로운 자바스크립트보다 배우기 쉽고 직관적인 jQuery를 더 선호하는 개발자가
+                        양산되기도 했다.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div> -->
+            <!--//cont4-->
+          </div>
+        </div>
+      </section>
+      <footer id="footer">
+        <div class="container">
+          <div class="footer">
+            <ul class="study">
+              <li><a href="#">Blog</a></li>
+              <li><a href="#">Gitbook</a></li>
+            </ul>
+            <span class="IMG"></span>
+            <span>ContactOn {01029693106 : Hwang Minji;}</span>
+          </div>
+        </div>
+      </footer>
+      <!--//footer-->
+    </section>
+    <!--//contents-->
+  </main>
+  <!--script-->
+  <script>
+    (function () {
+      //------------cont1
+      const inputs = document.querySelectorAll('.controls input');
+
+      function handleUpdate() {
+        //suffix 조건식에 '' 추가한이유:undefined
+        const suffix = this.dataset.sizing || '';
+        //html에서 설정한 data-@@ 값을 모두 보여줌
+        document.documentElement.style.setProperty(`--${this.name}`, this.value + suffix);
+        //setProperty() : 설정, 2개의 인자 (속성,값)
+      }
+
+      inputs.forEach(input => input.addEventListener('change', handleUpdate));
+      inputs.forEach(input => input.addEventListener('mousemove', handleUpdate));
+
+      //-------------cont2
+
+      // let d = new Date();
+      // //utc기준 9
+      // //korea> +9
+      // let korea_offset =9*60;
+      // let korea_time = d.setMinutes(d.getMinutes() + korea_offset);
+      // let kt = new Date(korea_time)
+      // console.log(kt.toString());
+
+      // //russia > +11
+      // let russia_offset = 11*60;
+      // let russia_time = d.setMinutes(d.getMinutes() + russia_offset);
+      // let rt = new Date(russia_time)
+      // console.log(rt.toString());
+
+      const secondHand = document.querySelector(".second-hand1");
+      const minHand = document.querySelector(".min-hand1");
+      const hoursHand = document.querySelector(".hour-hand1");
+      const time = document.querySelector(".time1");
+      const secondHand2 = document.querySelector(".second-hand2");
+      const minHand2 = document.querySelector(".min-hand2");
+      const hoursHand2 = document.querySelector(".hour-hand2");
+      const time2 = document.querySelector(".time2");
+      const secondHand3 = document.querySelector(".second-hand3");
+      const minHand3 = document.querySelector(".min-hand3");
+      const hoursHand3 = document.querySelector(".hour-hand3");
+      const time3 = document.querySelector(".time3");
+      const secondHand4 = document.querySelector(".second-hand4");
+      const minHand4 = document.querySelector(".min-hand4");
+      const hoursHand4 = document.querySelector(".hour-hand4");
+      const time4 = document.querySelector(".time4");
+      const secondHand5 = document.querySelector(".second-hand5");
+      const minHand5 = document.querySelector(".min-hand5");
+      const hoursHand5 = document.querySelector(".hour-hand5");
+      const time5 = document.querySelector(".time5");
+
+      function setDate1() {
+        const now = new Date();
+        const seconds = now.getSeconds();
+        const minutes = now.getMinutes();
+        const hours = now.getHours();
+        const Years = now.getFullYear();
+        const Months = now.getMonth() + 1;
+        const Days = now.getDate();
+
+        //+90deg는 default 값계산
+        const secondDegrees = ((seconds / 60) * 360) + 90;
+        const minDegrees = ((minutes / 60) * 360) + 90;
+        const hourDegrees = ((hours / 12) * 360) + 90;
+
+        secondHand.style.transform = `rotate(${secondDegrees}deg)`;
+        minHand.style.transform = `rotate(${minDegrees}deg)`;
+        hoursHand.style.transform = `rotate(${hourDegrees}deg)`;
+        time.textContent = `
+          ${Years}-${Months}-${Days} |
+          ${hours <10? `0${hours}`:hours}:
+          ${minutes <10? `0${minutes}`:minutes}:
+          ${seconds<10? `0${seconds}`:seconds}
+        `
+      }
+      function setDate2() {
+        const now2 = new Date();
+        const seconds2 = now2.getSeconds();
+        const minutes2 = now2.getMinutes();
+        const hours2 = now2.getHours() + 2;
+        const Years2 = now2.getFullYear();
+        const Months2 = now2.getMonth() + 1;
+        const Days2 = now2.getDate();
+
+        //+90deg는 default 값계산
+        const secondDegrees2 = ((seconds2 / 60) * 360) + 90;
+        const minDegrees2 = ((minutes2 / 60) * 360) + 90;
+        const hourDegrees2 = ((hours2 / 12) * 360) + 90;
+
+        secondHand2.style.transform = `rotate(${secondDegrees2}deg)`;
+        minHand2.style.transform = `rotate(${minDegrees2}deg)`;
+        hoursHand2.style.transform = `rotate(${hourDegrees2}deg)`;
+        time2.textContent = `
+          ${Years2}-${Months2}-${Days2} |
+          ${hours2 <10? `0${hours2}`:hours2}:
+          ${minutes2 <10? `0${minutes2}`:minutes2}:
+          ${seconds2<10? `0${seconds2}`:seconds2}
+        `
+      }
+      function setDate3() {
+        const now3 = new Date();
+        const seconds3 = now3.getSeconds();
+        const minutes3 = now3.getMinutes();
+        const hours3 = now3.getHours() -4;
+        const Years3 = now3.getFullYear();
+        const Months3 = now3.getMonth() + 1;
+        const Days3 = now3.getDate();
+
+        //+90deg는 default 값계산
+        const secondDegrees3 = ((seconds3 / 60) * 360) + 90;
+        const minDegrees3 = ((minutes3 / 60) * 360) + 90;
+        const hourDegrees3 = ((hours3 / 12) * 360) + 90;
+
+        secondHand3.style.transform = `rotate(${secondDegrees3}deg)`;
+        minHand3.style.transform = `rotate(${minDegrees3}deg)`;
+        hoursHand3.style.transform = `rotate(${hourDegrees3}deg)`;
+        time3.textContent = `
+          ${Years3}-${Months3}-${Days3} |
+          ${hours3 <10? `0${hours3}`:hours3}:
+          ${minutes3 <10? `0${minutes3}`:minutes3}:
+          ${seconds3<10? `0${seconds3}`:seconds3}
+        `
+      }
+      function setDate4() {
+        const now4 = new Date();
+        const seconds4 = now4.getSeconds();
+        const minutes4 = now4.getMinutes();
+        const hours4 = now4.getHours() -4;
+        const Years4 = now4.getFullYear();
+        const Months4 = now4.getMonth() + 1;
+        const Days4 = now4.getDate();
+
+        //+90deg는 default 값계산
+        const secondDegrees4 = ((seconds4 / 60) * 360) + 90;
+        const minDegrees4 = ((minutes4 / 60) * 360) + 90;
+        const hourDegrees4 = ((hours4 / 12) * 360) + 90;
+
+        secondHand4.style.transform = `rotate(${secondDegrees4}deg)`;
+        minHand4.style.transform = `rotate(${minDegrees4}deg)`;
+        hoursHand4.style.transform = `rotate(${hourDegrees4}deg)`;
+        time4.textContent = `
+          ${Years4}-${Months4}-${Days4} |
+          ${hours4 <10? `0${hours4}`:hours4}:
+          ${minutes4 <10? `0${minutes4}`:minutes4}:
+          ${seconds4<10? `0${seconds4}`:seconds4}
+        `
+      }
+      function setDate5() {
+        const now5 = new Date();
+        const seconds5 = now5.getSeconds();
+        const minutes5 = now5.getMinutes();
+        const hours5 = now5.getHours() -1;
+        const Years5 = now5.getFullYear();
+        const Months5 = now5.getMonth() + 1;
+        const Days5 = now5.getDate();
+
+        //+90deg는 default 값계산
+        const secondDegrees5 = ((seconds5 / 60) * 360) + 90;
+        const minDegrees5 = ((minutes5 / 60) * 360) + 90;
+        const hourDegrees5 = ((hours5 / 12) * 360) + 90;
+
+        secondHand5.style.transform = `rotate(${secondDegrees5}deg)`;
+        minHand5.style.transform = `rotate(${minDegrees5}deg)`;
+        hoursHand5.style.transform = `rotate(${hourDegrees5}deg)`;
+        time5.textContent = `
+          ${Years5}-${Months5}-${Days5} |
+          ${hours5 <10? `0${hours5}`:hours5}:
+          ${minutes5 <10? `0${minutes5}`:minutes5}:
+          ${seconds5<10? `0${seconds5}`:seconds5}
+        `
+      }
+      setInterval(setDate1, 1000);
+      setInterval(setDate2, 1000);
+      setInterval(setDate3, 1000);
+      setInterval(setDate4, 1000);
+      setInterval(setDate5, 1000);
+
+      //---------cont3
+      let x = 0,
+        y = 0,
+        mouseX = 0,
+        mouseY = 0,
+        angleX = 0,
+        angleY = 0,
+        fmouseX = 0,
+        fmouseY = 0;
+
+      document.addEventListener("mousemove", function (e) {
+        x = e.pageX;
+        y = e.pageY;
+
+        mouseX = Math.max(-50, Math.min(50, window.innerWidth / 2 - x));
+        mouseY = Math.max(-50, Math.min(50, window.innerHeight / 2 - y));
+        angleX = (mouseX * 12) / 70;
+        angleY = (mouseY * 12) / 70;
+        fmouseX += (angleX - fmouseX) * 1 / 7;
+        fmouseY += (angleY - fmouseY) * 1 / 7;
+
+        //움직임
+        let move = document.querySelectorAll(".cube");
+        move.forEach((elem) => {
+          elem.style.transform = " perspective(0) rotateX(" + fmouseX + "deg) rotateY(" + -fmouseY +
+            "deg)";
+        });
+        //pushtxt
+        let pushTXT = document.querySelector(".pushTXT > p");
+        let btnFRONT = document.querySelectorAll(".cube div.front");
+
+        btnFRONT.forEach((elem)=>{
+          elem.addEventListener("mouseenter",function(){
+            let frontTXT = this.innerText;
+            pushTXT.textContent = frontTXT;
+          });
+        });
+      });
+    }());
+  </script>
+
+</body>
+
+</html>

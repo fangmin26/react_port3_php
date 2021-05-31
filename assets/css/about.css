@@ -1,0 +1,494 @@
+@font-face {
+  font-family: "Iropke Batang";
+  font-style: normal;
+  font-weight: 400;
+  src: url(//cdn.jsdelivr.net/font-iropke-batang/1.2/IropkeBatangM.eot);
+  src: url(//cdn.jsdelivr.net/font-iropke-batang/1.2/IropkeBatangM.eot?#iefix)
+      format("embedded-opentype"),
+    url(//cdn.jsdelivr.net/font-iropke-batang/1.2/IropkeBatangM.woff)
+      format("woff"),
+    url(//cdn.jsdelivr.net/font-iropke-batang/1.2/IropkeBatangM.ttf)
+      format("truetype");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+/* root */
+#root.lock {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+#root {
+  width: auto;
+  height: auto;
+  overflow: auto;
+}
+#root.lock #loading {
+  z-index: 100000;
+}
+#root #loading {
+  z-index: -1;
+}
+
+/*loader*/
+
+.loader {
+  position: fixed;
+  /* visibility:visible; */
+  z-index: 999999;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100vh;
+  transition: width 0s 1.4s ease;
+}
+
+.loader .loader__icon {
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  opacity: 0;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  transition: opacity 0.5s ease;
+}
+
+#loading-rotater {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  animation: rotateBase 20s infinite linear;
+}
+
+#loading-svg {
+  animation: loading 2s infinite ease-in-out, rotate 2s infinite ease-in-out;
+  stroke-dasharray: 150.79632;
+}
+
+@keyframes loading {
+  0% {
+    stroke-dashoffset: 150.79632;
+  }
+  100% {
+    stroke-dashoffset: -150.79632;
+  }
+}
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotateBase {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.loader .loader__tile {
+  position: absolute;
+  left: 0;
+  width: 0;
+  height: 20%;
+  background-color: #000;
+  transition: width 0.7s ease;
+}
+.loader .loader__tile:nth-child(0) {
+  top: calc(-1 * 20%);
+  transition-delay: -0.2s;
+}
+.loader .loader__tile:nth-child(1) {
+  top: calc(0 * 20%);
+  transition-delay: 0s;
+}
+.loader .loader__tile:nth-child(2) {
+  top: calc(1 * 20%);
+  transition-delay: 0.2s;
+}
+.loader .loader__tile:nth-child(3) {
+  top: calc(2 * 20%);
+  transition-delay: 0.4s;
+}
+.loader .loader__tile:nth-child(4) {
+  top: calc(3 * 20%);
+  transition-delay: 0.6s;
+}
+.loader .loader__tile:nth-child(5) {
+  top: calc(4 * 20%);
+  transition-delay: 0.8s;
+}
+.loader--active {
+  width: 100%;
+  transition-delay: 0s;
+}
+.loader--active .loader__icon {
+  opacity: 1;
+  transition: opacity 0.5s 1.4s ease;
+}
+.loader--active .loader__tile {
+  width: 100%;
+}
+.loader--active .loader__tile:nth-child(0) {
+  transition-delay: -0.2s;
+}
+.loader--active .loader__tile:nth-child(1) {
+  transition-delay: 0s;
+}
+.loader--active .loader__tile:nth-child(2) {
+  transition-delay: 0.2s;
+}
+.loader--active .loader__tile:nth-child(3) {
+  transition-delay: 0.4s;
+}
+.loader--active .loader__tile:nth-child(4) {
+  transition-delay: 0.6s;
+}
+.loader--active .loader__tile:nth-child(5) {
+  transition-delay: 0.8s;
+}
+
+/*scroll*/
+#scroll {
+  position: fixed;
+  color: #fff;
+  font-size: 30px;
+  text-align: center;
+  line-height: 100px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+/*layout*/
+
+#contents {
+  width: 100%;
+}
+
+#section1 {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+#section2 {
+  width: 100%;
+}
+
+#footer {
+  width: 100%;
+  background: #000;
+}
+
+/*container*/
+.container {
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/*sec1*/
+.sec1 {
+  width: 100%;
+  height: 850px;
+  padding-top: 250px;
+  position: relative;
+}
+
+.sec1 h2 {
+  font-size: 150px;
+  font-family: "Rajdhani";
+  line-height: 96.6%;
+  letter-spacing: -2px;
+  max-width: 60%;
+  padding-bottom: 45px;
+}
+
+.sec1 .dot {
+  position: absolute;
+  right: -200px;
+  display: block;
+  width: calc(78% + 100px);
+  height: 1px;
+  background: #000;
+}
+
+.sec1 .dot::after {
+  content: "";
+  width: 8px;
+  height: 8px;
+  background: #000;
+  border-radius: 50%;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.sec1 h3 {
+  position: absolute;
+  right: 0;
+  display: block;
+  font-size: 150px;
+  font-family: "Raleway Dots";
+  line-height: 96.6%;
+  letter-spacing: -2px;
+  width: 78%;
+  padding-top: 45px;
+}
+
+.sec1 h3 strong {
+  display: block;
+  width: 100%;
+  font-weight: 500;
+  text-align: left;
+}
+
+.sec1 h3 em {
+  display: block;
+  width: 100%;
+  font-weight: 500;
+  text-align: right;
+}
+
+/*sec2*/
+
+.sec2 {
+  padding-bottom: 260px;
+}
+
+.sec2 .index_tit {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.sec2 .index_tit li {
+  font-style: "Rajdhani";
+  font-weight: 400;
+  font-size: 18px;
+  flex: 1 1 30%;
+  transform: translate(1500px, 0);
+  transform-origin: left;
+  transition: 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+.sec2 .index_tit li.active {
+  transform: translate(0px, 0);
+}
+.sec2 .index_tit li:last-of-type {
+  text-align: right;
+}
+
+.sec2 .index_box {
+  width: 100%;
+}
+
+.sec2 .index_box li {
+  position: relative;
+  width: 100%;
+  border: 1px solid #c4c4c4;
+  height: 369px;
+  margin-bottom: 5px;
+  overflow: hidden;
+  left: 1500px;
+  transform-origin: left;
+  transition: 1s 1.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.sec2 .index_box li.active {
+  left: 0px;
+}
+
+.sec2 .index_box li .boxes {
+  height: 100%;
+  padding: 30px;
+  box-sizing: border-box;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.sec2 .index_box li .boxes .fonts {
+  position: absolute;
+  display: block;
+  padding: 20px 30px;
+  color: #c4c4c4;
+  font-style: "Poppins";
+  font-weight: 300;
+}
+
+.sec2 .index_box li .boxes .fonts:nth-of-type(1) {
+  top: 0;
+  left: 0;
+}
+
+.sec2 .index_box li .boxes .fonts:nth-of-type(2) {
+  top: 0;
+  right: 0;
+}
+
+.sec2 .index_box li .boxes .fonts:nth-of-type(3) {
+  bottom: 0;
+  left: 0;
+}
+
+.sec2 .index_box li .boxes .fonts:nth-of-type(4) {
+  bottom: 0;
+  right: 0;
+}
+.sec2 .index_box li .boxes h4 {
+  font-size: 150px;
+  letter-spacing: -2px;
+}
+.sec2 .index_box li .boxes h4 {
+  position: relative;
+}
+.sec2 .index_box li .boxes h4 span {
+  position: relative;
+  display: inline-block;
+  top: 50%;
+  transform: translate(0%, 0%);
+}
+
+.sec2 .index_box li:nth-of-type(1) .boxes h4 span {
+  font-family: "Raleway";
+}
+.sec2 .index_box li:nth-of-type(2) .boxes h4 span {
+  font-family: "Raleway dots";
+}
+
+.sec2 .index_box li:nth-of-type(3) .boxes h4 span {
+  font-family: "Rajdhani";
+}
+
+.sec2 .index_box li:nth-of-type(4) .boxes h4 span {
+  font-family: "Racing Sans One", cursive;
+}
+
+.sec2 .index_box li .boxes .profile {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.sec2 .index_box li .boxes .profile > div {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  position: relative;
+}
+.sec2 .index_box li .boxes .profile > div:after {
+  position: absolute;
+  content: "HOVER ME!";
+  z-index: 100;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-family: "Rajdhani";
+  font-size: 20px;
+  opacity: 1;
+  animation: boom 1.5s 1s ease-in-out infinite;
+  transition: 0.5s ease;
+}
+@keyframes boom {
+  0% {
+    transform: translate(-50%, -50%) scale(0.8);
+  }
+  10% {
+    transform: translate(-50%, -50%) scale(1) skew(15deg);
+  }
+  20% {
+    transform: translate(-50%, -50%) scale(0.8) skew(-15deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+.sec2 .index_box li .boxes .profile > div:hover:after {
+  opacity: 0;
+}
+
+.sec2 .index_box li .desc p {
+  position: relative;
+  font-weight: 300;
+  font-family: "Iropke Batang";
+  font-size: 1.2rem;
+  transition: all ease 1s;
+  text-align: center;
+  max-width: 80%;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: 1s ease;
+}
+.sec2 .index_box li .desc p.active {
+  opacity: 1;
+}
+
+/*footer*/
+.footer {
+  height: 180px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.footer .study {
+  display: flex;
+}
+
+.footer .study li {
+  padding: 0 20px;
+}
+
+.footer .study li a {
+  display: block;
+  color: #fff;
+  font-family: "Rajdhani";
+  font-weight: 300;
+  font-size: 18px;
+  position: relative;
+}
+
+.footer .study li:hover a::after {
+  display: block;
+  content: "";
+  background: #fff;
+  width: 100%;
+  height: 2px;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+
+.footer span {
+  color: #fff;
+  font-family: "Rajdhani";
+  font-weight: 300;
+  font-size: 18px;
+}

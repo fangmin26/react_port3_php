@@ -1,0 +1,739 @@
+@font-face {
+  font-family: 'Iropke Batang';
+  font-style: normal;
+  font-weight: 400;
+  src: url(//cdn.jsdelivr.net/font-iropke-batang/1.2/IropkeBatangM.eot);
+  src: url(//cdn.jsdelivr.net/font-iropke-batang/1.2/IropkeBatangM.eot?#iefix) format('embedded-opentype'),
+    url(//cdn.jsdelivr.net/font-iropke-batang/1.2/IropkeBatangM.woff) format('woff'),
+    url(//cdn.jsdelivr.net/font-iropke-batang/1.2/IropkeBatangM.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'NIXGONM-Vb';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/NIXGONM-Vb.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* ::-webkit-scrollbar {
+  width: 10px;
+  background-color: #e8e8e8;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #000;
+  border-radius: 10px;
+} */
+
+
+* {
+  margin: 0;
+  padding: 0;
+  cursor:none;
+}
+/* root */
+#root.lock {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+#root {
+  width: auto;
+  height: auto;
+  overflow: auto;
+}
+#root.lock #loading {
+  z-index: 100000;
+}
+#root #loading {
+  z-index: -1;
+}
+
+/*loader*/
+
+.loader {
+  position: fixed;  
+  /* visibility:visible; */
+  z-index: 999999;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100vh;
+  transition: width 0s 1.4s ease;
+}
+
+.loader .loader__tile {
+  position: absolute;
+  left: 0;
+  width: 0;
+  height: 20%;
+  background-color: #000;
+  transition: width 0.7s ease;
+}
+.loader .loader__tile:nth-child(0) {
+  top: calc(-1 * 20%);
+  transition-delay: -0.2s;
+}
+.loader .loader__tile:nth-child(1) {
+  top: calc(0 * 20%);
+  transition-delay: 0s;
+}
+.loader .loader__tile:nth-child(2) {
+  top: calc(1 * 20%);
+  transition-delay: 0.2s;
+}
+.loader .loader__tile:nth-child(3) {
+  top: calc(2 * 20%);
+  transition-delay: 0.4s;
+}
+.loader .loader__tile:nth-child(4) {
+  top: calc(3 * 20%);
+  transition-delay: 0.6s;
+}
+.loader .loader__tile:nth-child(5) {
+  top: calc(4 * 20%);
+  transition-delay: 0.8s;
+}
+.loader--active {
+  width: 100%;
+  transition-delay: 0s;
+}
+.loader--active .loader__icon {
+  opacity: 1;
+  transition: opacity 0.5s 1.4s ease;
+}
+.loader--active .loader__tile {
+  width: 100%;
+}
+.loader--active .loader__tile:nth-child(0) {
+  transition-delay: -0.2s;
+}
+.loader--active .loader__tile:nth-child(1) {
+  transition-delay: 0s;
+}
+.loader--active .loader__tile:nth-child(2) {
+  transition-delay: 0.2s;
+}
+.loader--active .loader__tile:nth-child(3) {
+  transition-delay: 0.4s;
+}
+.loader--active .loader__tile:nth-child(4) {
+  transition-delay: 0.6s;
+}
+.loader--active .loader__tile:nth-child(5) {
+  transition-delay: 0.8s;
+}
+/*scroll*/
+#scroll {
+  position: fixed;
+  z-index: 1000;
+  color: #fff;
+  font-size: 30px;
+  text-align: center;
+  line-height: 100px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+/*layout*/
+
+#contents {
+  width: 100%;
+}
+
+#section1 {
+  width: 100%;
+}
+
+#section2 {
+  width: 100%;
+}
+
+#footer {
+  width: 100%;
+  background: #000;
+}
+
+/*container*/
+.container {
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto;
+}
+/*cursor*/
+#cursor{
+  position:absolute;
+  top:0;
+  left:0;
+  width:5px;
+  height:5px;
+  background:#000;
+  border-radius:50%;
+  z-index:1010;
+  user-select: none;
+  pointer-events: none;
+  transform:scale(1);
+  transition: .3s ease;
+}
+#cursor.active{
+  transform:scale(4);
+  background:rgba(0,0,0,0.2);
+}
+/*mouseevent*/
+#mouseevent{
+  position: fixed;
+  right: -6%;
+  bottom: 20%;
+  transform: rotate(90deg);
+}
+#mouseevent li{
+  font-family: 'Rajdhani';
+  font-size: 0.8rem;
+  display: inline;
+  padding:0 2px;
+}
+
+/*sec1*/
+.sec1 {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  border-bottom: 1px solid #e8e8e8;
+}
+
+.sec1 .title {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 350px;
+  padding-bottom: 219px;
+}
+
+.sec1 .title h2 {
+  font-family: 'Raleway Dots';
+  font-size: 120px;
+  text-transform: uppercase;
+  padding: 0 40px;
+  line-height: 96.6%;
+  text-align: center;
+  max-width:53%;
+}
+
+.sec1 .title p {
+  padding-top: 20px;
+  font-family: 'Iropke Batang';
+  font-size: 1rem;
+  max-width: 40%;
+  text-align: center;
+}
+
+/*sec2*/
+.sec2 {
+  width: 100%;
+  padding-bottom: 200px;
+}
+
+.sec2 ul.cont_nav {
+  margin-top: 100px;
+  display: flex;
+  justify-content: space-between;
+  opacity:0;
+  transform:skew(50deg) rotate(30deg);
+  transform-origin: center;
+  transition:1.5s 1s all ease;
+}
+.sec2 ul.cont_nav.active {
+  opacity:1;
+  transform:skew(0deg) rotate(0deg);
+}
+.sec2 ul.cont_nav li {
+  font-family: 'Rajdhani';
+  font-weight: 400;
+  font-size: .9rem;
+}
+
+.sec2 ul.cont_nav li:nth-of-type(1) {
+  flex: 1 1 10%;
+  font-size: 1.5rem;
+}
+
+.sec2 ul.cont_nav li:nth-of-type(2) {
+  flex: 1 1 30%;
+}
+
+.sec2 ul.cont_nav li:nth-of-type(3) {
+  flex: 1 1 30%;
+  font-weight: 600;
+  text-align: right;
+}
+
+.sec2 .cont {
+  margin-top: 30px;
+  width: 100%;
+  height:100vh;
+  opacity:0;
+  transform:skew(50deg) rotate(30deg);
+  transform-origin: center;
+  border: 1px solid #e8e8e8;
+  transition:1.5s 1s all ease;
+}
+.sec2 .cont.active {
+  opacity:1;
+  transform:skew(0deg) rotate(0deg);
+}
+
+.sec2 .cont .jscont {
+  width: 100%;
+  height: 100%;
+  padding: 30px;
+  box-sizing: border-box;
+  position: relative;
+  opacity:0;
+  overflow: hidden;
+  transition:1s 2s all ease;
+}
+.sec2 .cont.active .jscont {
+  opacity:1;
+}
+
+/*.jscont controls,desc */
+:root {
+  --base: #000000;
+  --fontSize: 200px;
+  --letterSpacing: 10px;
+}
+
+.sec2 .cont .jscont .controls {
+  display: inline-block;
+  position: absolute;
+  right: 30px;
+  top:30px;
+}
+
+
+.jscont .controls input[type=range] {
+  /*type range인 input 초기화*/
+  -webkit-appearance: none;
+  /**/
+  width: 150px;
+  height: 2px;
+  background: #000;
+  vertical-align: 2px;
+  margin-right: 10px;
+}
+
+.jscont .controls input[type=range]::-webkit-slider-thumb {
+  /*type range인 input 초기화*/
+  -webkit-appearance: none;
+  /**/
+  background: #fff;
+  border: 1px solid #000;
+  border-radius: 50%;
+  height: 10px;
+  width: 10px;
+  cursor: pointer;
+}
+
+.jscont .controls input.color {
+  border: none;
+  background: none;
+  padding: 0;
+  width: 30px;
+  height: 30px;
+  vertical-align: -5px;
+}
+.jscont .controls label {
+  width: 30%;
+  font-size: 14px;
+  font-family: 'Rajdhani';
+  font-weight: 500;
+}
+
+.jscont .jsdesc{
+  position: absolute;
+  z-index:900;
+  bottom: -220px;
+  left: 0;
+  height: 300px;
+  width: 100%;
+  background: #000;
+  color:#fff;
+  padding:30px 15px;
+  box-sizing: border-box;
+  transition: all 1.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+.jscont .jsdesc:hover{
+  bottom:0;
+}
+.jscont .jsdesc h4{
+  font-size:1.5rem;
+  font-family: 'Rajdhani';
+  font-weight: 500;
+}
+.jscont .jsdesc .view{
+  position:absolute;
+  top:30px;
+  right:15px;
+}
+
+.jscont .jsdesc .view .material-icons{
+  vertical-align: -8px;
+  margin-left: 5px;
+}
+
+.jscont .jsdesc p{
+  max-width: 60%;
+  font-size:1rem;
+  margin-top:20px;
+}
+/*.sec2 cont cont1*/
+.jscont .txt {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.jscont .txt h3 {
+  font-size: var(--fontSize);
+  color: var(--base);
+  letter-spacing: var(--letterSpacing);
+  font-weight: 400;
+  font-family: 'Rajdhani';
+  outline: none;
+}
+
+/* .jscont .txt input {
+  font-size: var(--fontSize);
+  color: var(--base);
+  letter-spacing: var(--letterSpacing);
+  width: 100%;
+  height: 100%;
+  font-family: 'Rajdhani';
+  font-weight: 400;
+  outline: none;
+  padding: 30px;
+  box-sizing: border-box;
+}
+
+.jscont .txt input::placeholder {
+  color: #e8e8e8;
+  font-family: 'Rajdhani';
+  font-weight: 400;
+  font-size: 100px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+} */
+
+
+
+/*sec2 .cont cont2*/
+.clock-box {
+  margin-top: 100px;
+  width: 100%;
+  height: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position:relative;
+}
+.clock-box > div{
+  display: flex;
+  position: absolute;
+  left: 1500px;
+  transition: all 4s ease;
+}
+.clock-box > div.active{
+  left:-1500px;
+}
+.clock-box > div .clock-container{
+  margin-left:150px;
+}
+
+.clock-box > div .clock-container .nation {
+  padding: 10px 0;
+  font-family: 'Rajdhani';
+  font-weight: 500;
+  font-size: 22px;
+  text-align: center;
+}
+.clock-box > div .clock-container h3 {
+  padding: 10px 0;
+  font-family: 'Rajdhani';
+  font-weight: 500;
+  font-size: 22px;
+  letter-spacing: -1px;
+  text-align: center;
+}
+
+.clock-box > div .clock-container .clock {
+  width: 15vw;
+  height: 15vw;
+  border: 20px solid var(--base);
+  border-radius: 50%;
+  position: relative;
+  padding: 2rem;
+  box-shadow: 0 0 0px 4px rgba(0, 0, 0, 0.1),
+    inset 0 0 0 3px #EFEFEF,
+    inset 0 0 10px #000,
+    0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.clock-box > div .clock-container .clock .clock-face {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform: translateY(-3px);
+}
+
+.hand {
+  width: 50%;
+  height: 6px;
+  background: var(--base);
+  border-radius: 10px;
+  position: absolute;
+  top: 50%;
+  transform-origin: 100%;
+  transform: rotate(90deg);
+  transition: all .1s cubic-bezier(0.42, 0, 0, 1.05) infinite;
+}
+
+.hour{
+  width: 30%;
+  left: 20%;
+}
+
+.second{
+  height: 2px;
+}
+
+/*cont3*/
+.pushTXT{
+  position:absolute;
+  z-index:500;
+  left:50%;
+  top:50%;
+  transform:translate(-50%,-50%);
+  border:1px solid black;
+  width:200px;
+  height:200px;
+  background:#fff;
+  text-align: center;
+  line-height:200px;
+}
+.pushTXT p:before{
+  content:'KEYBOARD TEXT';
+  position:absolute;
+  top:-60px;
+  left:20px;
+  font-family: 'Rajdhani';  
+  font-size:1em;
+  font-weight: 400; 
+}
+.pushTXT p{
+  font-size:2em;
+  font-family: 'Rajdhani';
+  font-weight: 400;
+}
+.js_contbox{
+  padding:20px 100px;
+}
+.cube {
+  position: relative;
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  margin: 15px;
+  cursor: pointer;
+  transform-style: preserve-3d;
+  transform: perspective(0) rotateX(0deg) rotateY(0deg);
+}
+
+.cube div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100px;
+  height: 100px;
+  background: #fff;
+  border: 1px solid var(--base);
+  color: #fff;
+  transition: .2s ease;
+}
+
+.cube:hover div:nth-child(1)
+{
+  width: 100px;
+  height: 0px;
+}
+.cube:hover div:nth-child(2){
+  width: 100px;
+  height: 0px;
+}
+.cube:hover div:nth-child(3),
+.cube:hover div:nth-child(4) {
+  height: 100px;
+  width: 0px;
+}
+
+.cube:hover div:nth-child(5) {
+  transform: rotateY(0deg) translatex(0px) translatez(-100px);
+}
+
+.cube div:nth-child(1) {
+  transform-origin: center top;
+  transform: rotateX(90deg) translateY(-100px) translatez(0);
+}
+
+.cube div:nth-child(2) {
+  transform-origin: center bottom;
+  transform: rotateX(-90deg) translateY(100px) translatez(0);
+}
+
+.cube div:nth-child(3) {
+  transform-origin: left center;
+  transform: rotateY(-90deg) translateX(-100px) translatez(0);
+}
+
+.cube div:nth-child(4) {
+  transform-origin: right center;
+  transform: rotateY(90deg) translateX(100px) translatez(0);
+  opacity:0;
+}
+
+.cube div:nth-child(5) {
+  transform-origin: center center;
+  transform: rotateY(0deg) translatex(0px) translatez(0);
+}
+
+.cube div:nth-child(6) {
+  transform-origin: center center;
+  transform: rotateY(180deg) translatez(100px);
+}
+
+.cube div.front {
+  color: var(--base);
+  position: relative;
+  font-size: 2rem;
+}
+
+.cube div.front em {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.cube div.front span {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.cube div.front strong {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+/*cont4*/
+.scroll_cont {
+  font-family: 'Rajdhani';
+  font-weight: 400;
+  font-size: 18px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+
+}
+
+.scroll_cont .left {
+  background: var(--base);
+  color: #fff;
+  flex: 1 1 20%;
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.scroll_cont .right {
+  position: relative;
+  flex: 1 1 80%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.scroll_cont .right p {
+  color: var(--base);
+  font-family: 'Iropke Batang';
+  font-weight: 400;
+  font-size: 15px;
+  padding-bottom: 70px;
+}
+
+.scroll_cont .right h3 {
+  color: var(--base);
+  font-family: 'Iropke Batang';
+  font-size: 18px;
+  font-weight: 700;
+}
+
+
+
+/*footer*/
+.footer {
+  height: 180px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.footer .study {
+  display: flex;
+}
+
+.footer .study li {
+  padding: 0 20px;
+}
+
+.footer .study li a {
+  display: block;
+  color: #fff;
+  font-family: 'Rajdhani';
+  font-weight: 400;
+  font-size: 18px;
+  position: relative;
+
+}
+
+.footer .study li:hover a::after {
+  display: block;
+  content: '';
+  background: #fff;
+  width: 100%;
+  height: 2px;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+
+.footer span {
+  color: #fff;
+  font-family: 'Rajdhani';
+  font-weight: 300;
+  font-size: 18px;
+}

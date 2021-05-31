@@ -1,0 +1,118 @@
+@font-face {
+    font-family: 'Iropke Batang';
+    font-style: normal;
+    font-weight: 400;
+    src: url(//cdn.jsdelivr.net/font-iropke-batang/1.2/IropkeBatangM.eot);
+    src: url(//cdn.jsdelivr.net/font-iropke-batang/1.2/IropkeBatangM.eot?#iefix) format('embedded-opentype'),
+         url(//cdn.jsdelivr.net/font-iropke-batang/1.2/IropkeBatangM.woff) format('woff'),
+         url(//cdn.jsdelivr.net/font-iropke-batang/1.2/IropkeBatangM.ttf) format('truetype');
+  }
+
+/* layout */
+#header {
+    position: fixed;
+    left: 0; top: 0;
+    width: 100%;
+    border-bottom: 1px solid rgb(232, 232, 232);
+    backdrop-filter: saturate(180%) blur(5px);
+}
+#contents {
+
+}
+#section1 {
+}
+
+/* container */
+.container {
+    max-width: 1400px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+
+/* nav */
+.nav {}
+.nav ul {
+    display: flex;
+    align-items: center;
+}
+.nav li {
+    border-right: 1px solid rgb(232, 232, 232);
+    text-align: center;
+}
+.nav li a {
+    display: block;
+    font-family: 'Rajdhani';
+    font-size: 1.3rem;
+    font-weight: 100;
+    transition: color 0.33s;
+    padding: 50px;
+}
+.nav li.active a {
+    background: #000;
+    color: #fff;
+    position: relative;
+}
+.nav li.active a::before {
+    content: '';
+    width: 8px; height: 8px;
+    background: #fff;
+    border-radius: 50%;
+    position: absolute;
+    left: 10px;
+    top: 10px;
+}
+.nav li:nth-child(1) {
+    flex: 1 1 20%;
+}
+.nav li:nth-child(1) a {
+    font-size: 3.2rem;
+    font-weight: 100;
+    padding: 20px;
+}
+.nav li:nth-child(2) {
+    flex: 1 1 10%;
+}
+.nav li:nth-child(3) {
+    flex: 1 1 10%;
+}
+.nav li:nth-child(4) {
+    flex: 1 1 10%;
+}
+.nav li:nth-child(5) {
+    flex: 1 1 10%;
+}
+.nav li:nth-child(6) {
+    flex: 1 1 10%;
+}
+.nav li:nth-child(7) {
+    flex: 1 1 20%;
+}
+
+
+/* sec1 */
+.sec1 {
+    padding: 300px 0 200px;
+    text-align: center;
+}
+.sec1 h3 {
+    font-family: 'Raleway Dots';
+    font-size: 10vw;
+    line-height: 1;
+}
+.sec1 p {
+    font-family: 'Iropke Batang';
+    font-size: 1rem;
+    padding: 2rem 20%;
+}
+
+
+/* sec2 */
+.sec2 {
+    height: 2000px;
+    border-top: 1px solid #000;
+    font-family: 'Rajdhani';
+}
+.sec2 h2 {
+    font-size: 1rem;
+}

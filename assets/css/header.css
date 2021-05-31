@@ -1,0 +1,111 @@
+ #header {
+  position: fixed;
+  z-index: 1000;
+  top: -200px;
+  left: 0;
+  width: 100%;
+  border-bottom: 1px solid rgb(232, 232, 232);
+  backdrop-filter: saturate(180%) blur(5px);
+}
+/*nav*/
+.nav {}
+
+.nav ul {
+  display: flex;
+  align-items: center;
+}
+
+.nav li {
+  border-right: 1px solid rgb(232, 232, 232);
+  text-align: center;
+  transition: all ease .5s;
+}
+
+.nav li a {
+  display: block;
+  font-family: 'Rajdhani';
+  font-size: 1.3rem;
+  font-weight: 100;
+  padding: 50px;
+  transition: all .3s ease;
+}
+
+.nav li a.shrink {
+  padding: 28px 50px;
+}
+
+.nav li.active a {
+  background: #000;
+  color: #fff;
+  position: relative;
+}
+
+.nav li.active a::before {
+  content: '';
+  width: 8px;
+  height: 8px;
+  background: #fff;
+  border-radius: 50%;
+  position: absolute;
+  left: 10px;
+  top: 10px;
+}
+
+.nav li:nth-of-type(1) {
+  flex: 1 1 20%;
+  border: none;
+  /*grow shrink basis,반응형에적합,1일 경우 텍스트포함 점유*/
+}
+
+.nav li:nth-of-type(1) a {
+  font-size: 3.2rem;
+  font-weight: 100;
+  padding: 5px;
+}
+
+.nav li:nth-of-type(2) {
+  flex: 1 1 10%;
+  border-left: 1px solid rgb(232, 232, 232);
+}
+
+.nav li:nth-of-type(3) {
+  flex: 1 1 10%;
+}
+
+.nav li:nth-of-type(4) {
+  flex: 1 1 10%;
+}
+
+.nav li:nth-of-type(5) {
+  flex: 1 1 10%;
+}
+
+.nav li:nth-of-type(6) {
+  flex: 1 1 10%;
+}
+
+.nav li:nth-of-type(7) {
+  flex: 1 1 20%;
+  position: relative;
+}
+
+.nav li:nth-of-type(7) span {
+  display: inline-block;
+}
+
+.nav li:nth-of-type(7) span a {
+  display: inline-block;
+  font-family: 'Rajdhani';
+  font-size: 1rem;
+  font-weight: 100;
+  padding: 10px;
+}
+
+.nav li:nth-of-type(7) .welcome {
+  position: absolute;
+  bottom: -13px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: 'Rajdhani';
+  font-size: 1rem;
+}
